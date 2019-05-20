@@ -1,0 +1,54 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+int main ()
+{
+  int a, b, c, d, e, f, g, h, i, j;
+  //inputs
+  cout << "Enter ten varying integers" << endl;
+  cin>>a;
+  cin>>b;
+  cin>>c;
+  cin>>d;
+  cin>>e;
+  cin>>f;
+  cin>>g;
+  cin>>h;
+  cin>>i;
+  cin>>j;
+  
+  cout << "You chose: ";
+  cout << a << ", " << b << ", " << c << ", " << d << ", " << e << ", " << f
+    << ", " << g << ", " << h << ", " << i << ", " << j << endl;
+
+
+  int val[10] = { a, b, c, d, e, f, g, h, i, j };
+  int index, largestInt, smallestInt, sum;
+  // processing
+  
+  //largest
+  int maxIndex = 0;
+  for (index = 0; index < 10; index++)
+  if (val[maxIndex] < val[index])
+  maxIndex = index;
+  largestInt = val[maxIndex];
+  
+  cout<< "The largest integer is: "<<largestInt<<endl;
+  
+  //smallest
+  for (index = 0; index < 10; index++)
+  if (val[maxIndex] > val[index])
+  maxIndex = index;
+  smallestInt = val[maxIndex];
+  
+  cout<< "The smallest integer is: "<<smallestInt<<endl;
+  
+  //sum
+  sum = 0;
+  for (index = 0; index <10; index++)
+  sum = sum + val[index];
+  
+  cout<<"The sum of all entered integers is: "<<sum<<endl;
+  return 0;
+}
